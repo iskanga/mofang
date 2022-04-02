@@ -1,0 +1,102 @@
+.mofang{
+	position: absolute;
+	left: calc(50% - 100px);
+	right: calc(50% - 100px);
+}
+.choose{
+	width: 900px;
+	height: 300px;
+	text-align: center;
+	margin: 50px auto;
+}
+
+.button{
+	display: inline-block;
+	width: 80px;
+	height: 40px;
+	font-size: 16px;
+	color: black;
+	border: #CCCCCC 1px solid;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 40px;
+	
+}
+
+/* 标签悬浮效果 */
+.button:hover{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+
+/* 模仿旋转效果 */
+#front:checked ~ .mofang{
+	transform: rotate3d(0,0,0,0deg);
+}
+#back:checked ~ .mofang{
+	transform: rotate3d(0,1,0,-180deg);
+}
+#left:checked ~ .mofang{
+	transform: rotate3d(0,1,0,90deg);
+}
+#right:checked ~ .mofang{
+	transform: rotate3d(0,1,0,-90deg);
+}
+#top:checked ~ .mofang{
+	transform: rotate3d(1,0,0,-90deg);
+}
+#bottom:checked ~ .mofang{
+	transform: rotate3d(1,0,0,90deg);
+}
+
+/* 标签选中效果 */
+#front:checked ~ .choose [for="front"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#back:checked ~ .choose [for="back"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#left:checked ~ .choose [for="left"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#right:checked ~ .choose [for="right"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#top:checked ~ .choose [for="top"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#bottom:checked ~ .choose [for="bottom"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#big:checked ~ .choose [for="big"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+#small:checked ~ .choose [for="small"]{
+	background: royalblue;
+	color: white;
+	box-shadow: 0 0 10px gainsboro;
+}
+
+/* transform:scale(放大的倍数) */
+#big:checked ~ .mofang{
+	transform: scale(1.5);
+	/* transform: translateZ(300px); */
+}
+#small:checked ~ .mofang{
+	transform: scale(0.5);
+}
